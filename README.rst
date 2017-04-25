@@ -4,7 +4,7 @@ booking-api
 
 simple hotel booking api description
 
-See `apiary booking api documentation`__ for rendered `booking-api.apib` file.
+See `booking api documentation`__ for rendered ``booking-api.apib`` file.
 
 __ http://docs.bookingapi3.apiary.io/
 
