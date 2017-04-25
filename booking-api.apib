@@ -5,9 +5,33 @@ HOST: http://booking-api.windingtree.com/
 
 Hotel Booking API allows hotels upload their inventory and users create a booking.
 
+## Hotels Availability [/search-available-hotels]
+
+### Search for Availability [POST]
+
+Search give area for available hotels.
+
++ Request (application/json)
+
+        {
+            "lat": 0,
+            "lng": 0,
+            "radius": 10000, # 10km, more range -> more results (paginated)
+            "guests_number": 2,
+            "amenities": [] # specific needs
+        }
+
++ Response 200 (application/json)
+
+        [
+            "http://booking-api.windingtree.com/hotels/7f0ddae0ac541bd1"
+        ]
+
 ## Hotels Collection [/hotels]
 
 ### List All Hotels [GET]
+
+Details for any Hotel object in the database.
 
 + Response 200 (application/json)
 
