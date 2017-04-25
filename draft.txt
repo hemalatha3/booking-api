@@ -1,0 +1,59 @@
+
+API>
+
+-> availability
+
+/search-available-hotels/
+
+query:
+  lat, lng, radius (more results ~ more ether?)
+  date from, date till (tom@roomranger likes datetimes)
+  number of guests
+  ?extra very specific needs
+
+-> list of hotels
+
+/hotels/{id}
+
+name
+description
+location
+  lat
+  lng
+address
+  line 1
+  line 2
+  zip
+  city
+  country
+timezone
+rating
+capacity
+images
+amenities
+
+-> upload inventory
+
+/hotel-inventory/
+
+hotel
+min_guests
+max_guests
+room_type
+rooms_available
+date
+price
+currency
+amenities
+
+-> booking
+
+/hotel-bookings/
+
+query:
+  hotel
+  date from, date till
+  guests: [
+    {name, email, phone, pnr, note}
+  ]
+
