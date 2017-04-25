@@ -4,6 +4,10 @@ booking-api
 
 simple hotel booking api description
 
+See `apiary booking api documentation`__ for rendered `booking-api.apib` file.
+
+__ http://docs.bookingapi3.apiary.io/
+
 Did you ever wonder, why there are no standards for hotel booking APIs and all the providers create their own?
 Or if there are `some`__ `ideas`__ they seem overcomplicated and pretty loose?
 

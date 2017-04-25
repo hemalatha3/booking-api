@@ -1,7 +1,79 @@
 FORMAT: 1A
+HOST: http://booking-api.windingtree.com/
 
-# GET /
-+ Response 200 (application/json; charset=utf-8)
+# Hotel Booking API
 
-        {"message": "Hello World!"}
+Hotel Booking API allows hotels upload their inventory and users create a booking.
+
+## Hotels Collection [/hotels]
+
+### List All Hotels [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "7f0ddae0ac541bd1",
+                "name": "Vista del Pinnella Pass",
+                "description": "Long text of describing this venue...",
+                "created": "2017-04-25T12:56:29.310Z",
+                "location": {
+                    "lat": 0,
+                    "lng": 0
+                },
+                "address": {
+                    "line 1": "979 Forest Drive",
+                    "line 2": "",
+                    "zip": "22181",
+                    "city": "Vienna",
+                    "country": "Rwanda"
+                },
+                "timezone": "CAT", # UTC+02:00
+                "rating": 4.8,
+                "capacity": 1024,
+                "amenities": [],
+                "images": []
+            }
+        ]
+
+## Hotels Invetory Upload [/hotel-inventory]
+
+### Upload New Invetory [POST]
+
+You can upload inventory for any day with any room type, any capacity,
+any price.
+
++ Request (application/json)
+
+        {
+            "hotel": "http://booking-api.windingtree.com/hotels/7f0ddae0ac541bd1",
+            "min_guests": 1,
+            "max_guests": 2,
+            "room_type": "Double Queen Bed",
+            "rooms_available": 10,
+            "date": "2017-05-05",
+            "price": 120,
+            "currency": "USD",
+            "amenities": []
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /upload-inventory/a68da69c5644ec70
+
+    + Body
+
+            {
+                "hotel": "http://booking-api.windingtree.com/hotels/7f0ddae0ac541bd1",
+                "min_guests": 1,
+                "max_guests": 2,
+                "room_type": "Double Queen Bed",
+                "rooms_available": 10,
+                "date": "2017-05-05",
+                "price": 120,
+                "currency": "USD",
+                "amenities": []
+            }
 
