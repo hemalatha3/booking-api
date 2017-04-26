@@ -101,3 +101,50 @@ any price.
                 "amenities": []
             }
 
+## Hotel Room Booking [/hotel-booking]
+
+### Create Hotel Room Booking [POST]
+
+Booking of a room in one hotel.
+
++ Request (application/json)
+
+        {
+            "hotel": "http://booking-api.windingtree.com/hotels/7f0ddae0ac541bd1",
+            "date_from": "2017-05-05",
+            "date_till": "2017-05-06",
+            "guests": [
+                {
+                    "name": "Marjorie Muriel Peterson",
+                    "email": "marjorie.peterson@windingtree.com",
+                    "phone": "+43605456789",
+                    "pnr": "", # this is very airline specific, what else do we need to identify person?
+                    "note": "i want to stay in this hotel"
+                }
+            ]
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /upload-booking/e0af617e28919045
+
+    + Body
+
+            {
+                "id": "e0af617e28919045",
+                "hotel": "http://booking-api.windingtree.com/hotels/7f0ddae0ac541bd1",
+                "date_from": "2017-05-05",
+                "date_till": "2017-05-06",
+                "guests": [
+                    {
+                        "name": "Marjorie Muriel Peterson",
+                        "email": "marjorie.peterson@windingtree.com",
+                        "phone": "+43605456789",
+                        "pnr": "",
+                        "note": "i want to stay in this hotel"
+                    }
+                ]
+            }
+
