@@ -1,0 +1,63 @@
+
+Flights API>
+
+-> availability
+
+/search-available-flights/
+
+query:
+  from, to
+  datetime (range of time of departure)
+  number of passengers
+  ?through (list of airports)
+  ?specific requirements (class, meal, ...)
+
+-> list of flights (route + airline)
+ + available inventory (seat): airline, seat_type, datetime, price, currency
+
+/routes/{id}
+
+from_airport
+to_airport
+
+/airports/{id}
+
+name
+iata
+location
+  lat
+  lng
+timezone
+
+/airlines/{id}
+
+name
+iata
+address
+
+-> upload availabile seats
+
+/flight-inventory/
+
+airline
+seat_type
+seats_available
+route
+datetime (or there can be one more entity - flight)
+price
+currency
+amenities
+
+-> booking a flight
+
+/flight-bookings/
+
+query:
+  airline
+  route
+  seat_types: {'type': count}
+  datetime
+  passengers: [
+    {name, email, phone, pnr, note}
+  ]
+
