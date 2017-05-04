@@ -52,6 +52,7 @@ amenities
 
 query:
   hotel
+  room_types: {'type': count}
   date from, date till
   guests: [
     {name, email, phone, pnr, note}

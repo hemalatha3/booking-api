@@ -102,7 +102,7 @@ with given capacity and price.
                 "amenities": []
             }
 
-## Hotel Room Booking [/hotel-booking]
+## Hotel Room Booking [/hotel-bookings]
 
 ### Create Hotel Room Booking [POST]
 
@@ -114,6 +114,9 @@ Booking of a room in one hotel.
             "hotel": "http://booking-api.windingtree.com/hotels/7f0ddae0ac541bd1",
             "date_from": "2017-05-05",
             "date_till": "2017-05-06",
+            "room_types": {
+                "Double Queen Bed": 1,
+            },
             "guests": [
                 {
                     "name": "Marjorie Muriel Peterson",
@@ -129,12 +132,12 @@ Booking of a room in one hotel.
 
     + Headers
 
-            Location: /upload-booking/e0af617e28919045
+            Location: /hotel-bookings/e0af617e28919045
 
     + Body
 
             {
-                "resource": "http://booking-api.windingtree.com/upload-booking/e0af617e28919045",
+                "resource": "http://booking-api.windingtree.com/hotel-bookings/e0af617e28919045",
                 "hotel": "http://booking-api.windingtree.com/hotels/7f0ddae0ac541bd1",
                 "date_from": "2017-05-05",
                 "date_till": "2017-05-06",
