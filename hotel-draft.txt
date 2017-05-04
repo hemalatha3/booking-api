@@ -1,5 +1,5 @@
 
-API>
+Hotel API>
 
 -> availability
 
