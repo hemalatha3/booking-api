@@ -1,5 +1,5 @@
 
-API>
+Hotel API>
 
 -> availability
 
@@ -32,7 +32,7 @@ capacity
 images
 amenities
 
--> upload inventory
+-> upload available rooms
 
 /hotel-inventory/
 
@@ -46,7 +46,7 @@ price
 currency
 amenities
 
--> booking
+-> booking a room
 
 /hotel-bookings/
 
