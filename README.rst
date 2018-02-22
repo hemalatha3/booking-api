@@ -2,17 +2,11 @@
 booking-api
 ===========
 
-simple hotel booking api description
+this API description is now *obsolete* in favor of the basic `API` implementation [1] based on our smart contracts [2]
+and javascript library [3].
 
-See `booking api documentation`__ for rendered ``booking-api.apib`` file.
+[1] https://github.com/windingtree/wt-nodejs-api
+[2] https://github.com/windingtree/wt-contracts
+[3] https://github.com/windingtree/wt-js-libs
 
-__ http://docs.bookingapi3.apiary.io/
-
-Did you ever wonder, why there are no standards for hotel booking APIs and all the providers create their own?
-Or if there are `some`__ `ideas`__ they seem overcomplicated and pretty loose?
-
-__ http://www.iata.org/whatwedo/airline-distribution/ndc/Pages/default.aspx
-__ http://www.opentravel.org/
-
-So did we and we'd like to propose super simple approach, with reasonable flexibility without any outdated principles.
-
+Follow our project. We will continue the work on travel standards as well.
